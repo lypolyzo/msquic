@@ -90,13 +90,13 @@ uint32_t Count = 10;
 uint16_t Checksum(void* input, size_t bytes)
 {
     uint16_t *data = (uint16_t*)input;
-	uint32_t sum = 0;
-	for (size_t i = 0; i < bytes/2; ++i) {
-		sum += data[i];
-	}
-	sum = (sum & 0xFFFF) + (sum >> 16);
-	sum = htons(0xFFFF - sum);
-	return htons(sum);
+    uint32_t sum = 0;
+    for (size_t i = 0; i < bytes/2; ++i) {
+        sum += data[i];
+    }
+    sum = (sum & 0xFFFF) + (sum >> 16);
+    sum = htons(0xFFFF - sum);
+    return htons(sum);
 }
 
 void echo_request()
