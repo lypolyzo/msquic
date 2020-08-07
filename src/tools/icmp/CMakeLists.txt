@@ -1,4 +1,4 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-add_quic_tool(ttl ttl.cpp)
+add_quic_tool(icmp icmp.cpp)
