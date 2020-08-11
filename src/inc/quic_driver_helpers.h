@@ -14,6 +14,11 @@ Abstract:
 #include "quic_platform.h"
 #include "quic_trace.h"
 
+#ifdef QUIC_CLOG
+#include "quic_driver_helpers.h.clog.h"
+#endif
+
+
 #ifdef _WIN32
 
 #define QUIC_DRIVER_FILE_NAME  QUIC_DRIVER_NAME ".sys"

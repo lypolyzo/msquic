@@ -8,6 +8,14 @@
         }
       ]
     },
+    "stdout": {
+      "Modules": [
+        {
+          "ExportModule": "STDOUT",
+          "CustomSettings": {}
+        }
+      ]
+    },
     "empty": {
       "SkipProcessing": true,
       "Modules": []
@@ -75,7 +83,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -86,7 +94,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -97,7 +105,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -108,7 +116,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -119,7 +127,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -130,7 +138,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -141,7 +149,7 @@
         "linux": "lttng_plus",
        "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -152,7 +160,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -163,7 +171,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -174,7 +182,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -185,7 +193,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     },
     {
@@ -196,7 +204,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "empty"
+        "windows": "stdout"
       }
     }
   ],

@@ -40,3 +40,5 @@ endif()
 
 add_library(warnings INTERFACE)
 target_compile_options(warnings INTERFACE ${QUIC_WARNING_FLAGS})
+
+add_clog_library(core.inc.clog DYNAMIC quic_driver_helpers.h)

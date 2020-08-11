@@ -209,6 +209,11 @@ if(WIN32)
     file(WRITE ${QUIC_BUILD_DIR}/inc/MsQuicEtw.rc)
     include_directories(${QUIC_BUILD_DIR}/inc)
 
+    include_directories(${QUIC_BUILD_DIR}/inc/core.inc.clog)
+    include_directories(${QUIC_BUILD_DIR}/inc/msquicplatformtest.clog)
+
+
+
     add_custom_command(
         OUTPUT ${QUIC_BUILD_DIR}/inc/MsQuicEtw.h
         OUTPUT ${QUIC_BUILD_DIR}/inc/MsQuicEtw.rc
@@ -224,10 +229,12 @@ if(WIN32)
         list(APPEND QUIC_COMMON_DEFINES WINAPI_FAMILY=WINAPI_FAMILY_DESKTOP_APP QUIC_UWP_BUILD)
     endif()
 
+list(APPEND QUIC_COMMON_DEFINES QUIC_CLOG)
+
     if(QUIC_ENABLE_LOGGING)
         message(STATUS "Configuring for manifested ETW tracing")
         set(CMAKE_CLOG_CONFIG_PROFILE windows)
-        list(APPEND QUIC_COMMON_DEFINES QUIC_EVENTS_MANIFEST_ETW QUIC_LOGS_MANIFEST_ETW)
+        # list(APPEND QUIC_COMMON_DEFINES QUIC_EVENTS_MANIFEST_ETW QUIC_LOGS_MANIFEST_ETW)
     else()
         message(STATUS "Disabling tracing")
         set(CMAKE_CLOG_CONFIG_PROFILE stubs)
