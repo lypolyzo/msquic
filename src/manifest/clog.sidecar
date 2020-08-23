@@ -19941,11 +19941,23 @@
           }
         ]
       },
+      "stdout_asimov": {
+        "Modules": [
+          {
+            "ExportModule": "STDOUT",
+            "CustomSettings": {
+              "ENCODE_UINT64_KEYWORD": "0x0000400000000000"
+            }
+          }
+        ]
+      },
       "stdout": {
         "Modules": [
           {
             "ExportModule": "STDOUT",
-            "CustomSettings": {}
+            "CustomSettings": {
+              "ENCODE_UINT64_KEYWORD": "0x0000000000000000"
+            }
           }
         ]
       },
@@ -20017,7 +20029,7 @@
           "linux": "lttng_plus",
           "stubs": "stubs",
           "windows_kernel": "empty",
-          "windows": "stdout"
+          "windows": "stdout_asimov"
         },
         "CustomSettings": null
       },
@@ -20029,7 +20041,7 @@
           "linux": "lttng_plus",
           "stubs": "stubs",
           "windows_kernel": "empty",
-          "windows": "stdout"
+          "windows": "stdout_asimov"
         },
         "CustomSettings": null
       },
@@ -20089,7 +20101,7 @@
           "linux": "lttng_plus",
           "stubs": "stubs",
           "windows_kernel": "empty",
-          "windows": "stdout"
+          "windows": "stdout_asimov"
         },
         "CustomSettings": null
       },
@@ -20101,7 +20113,7 @@
           "linux": "lttng_plus",
           "stubs": "stubs",
           "windows_kernel": "empty",
-          "windows": "stdout"
+          "windows": "stdout_asimov"
         },
         "CustomSettings": null
       },
@@ -20113,7 +20125,7 @@
           "linux": "lttng_plus",
           "stubs": "stubs",
           "windows_kernel": "empty",
-          "windows": "stdout"
+          "windows": "stdout_asimov"
         },
         "CustomSettings": null
       },
@@ -22450,12 +22462,12 @@
         "TraceID": "StorageOpenKey"
       },
       {
-        "UniquenessHash": "00c7421a-0362-8e3d-3a75-c687580a3150",
-        "TraceID": "EncodeTPOriginalCID"
-      },
-      {
         "UniquenessHash": "7ad01371-3763-ffc5-7a58-7ef116e5792b",
         "TraceID": "TestSendIoctl"
+      },
+      {
+        "UniquenessHash": "00c7421a-0362-8e3d-3a75-c687580a3150",
+        "TraceID": "EncodeTPOriginalCID"
       },
       {
         "UniquenessHash": "335643ef-1fdb-099b-6672-4452222524ff",

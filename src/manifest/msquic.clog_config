@@ -8,11 +8,23 @@
         }
       ]
     },
-    "stdout": {
+    "stdout_asimov": {
       "Modules": [
         {
           "ExportModule": "STDOUT",
-          "CustomSettings": {}
+          "CustomSettings": {
+            "ENCODE_UINT64_KEYWORD": 0x0000400000000000
+          }
+        }
+      ]
+    },
+     "stdout": {
+      "Modules": [
+        {
+          "ExportModule": "STDOUT",
+          "CustomSettings": {
+            "ENCODE_UINT64_KEYWORD": 0x0000000000000000
+          }
         }
       ]
     },
@@ -83,7 +95,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "stdout"
+        "windows": "stdout_asimov"
       }
     },
     {
@@ -94,7 +106,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "stdout"
+        "windows": "stdout_asimov"
       }
     },
     {
@@ -149,7 +161,7 @@
         "linux": "lttng_plus",
        "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "stdout"
+        "windows": "stdout_asimov"
       }
     },
     {
@@ -160,7 +172,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "stdout"
+        "windows": "stdout_asimov"
       }
     },
     {
@@ -171,7 +183,7 @@
         "linux": "lttng_plus",
         "stubs": "stubs",
         "windows_kernel": "empty",
-        "windows": "stdout"
+        "windows": "stdout_asimov"
       }
     },
     {
