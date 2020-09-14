@@ -92,7 +92,7 @@ typedef enum {
 //
 // The maximum allowed pending WSK buffers per proc before copying.
 //
-#define PENDING_BUFFER_LIMIT                0
+#define PENDING_BUFFER_LIMIT                256000
 
 static_assert(
     sizeof(QUIC_BUFFER) == sizeof(WSABUF),
@@ -1862,10 +1862,10 @@ QuicDataPathFreeRecvContext(
                 Context->DataBufferStart);
         } else {
             DataIndication = Context->DataIndication;
-            InterlockedAdd64(
-                &Context->ProcContext->OutstandingPendingBytes,
-                -Context->DataIndicationSize);
         }
+        InterlockedAdd64(
+            &Context->ProcContext->OutstandingPendingBytes,
+            -Context->DataIndicationSize);
     }
 
     QuicPoolFree(
@@ -2125,11 +2125,12 @@ QuicDataPathSocketReceive(
                     RecvContext->IsCopiedBuffer = FALSE;
                     RecvContext->DataIndication = DataIndication;
                     QUIC_DBG_ASSERT(DataIndication->Next == NULL);
-                    RecvContext->DataIndicationSize = (int32_t)DataLength;
-                    InterlockedAdd64(
-                        &RecvContext->ProcContext->OutstandingPendingBytes,
-                        RecvContext->DataIndicationSize);
                 }
+
+                RecvContext->DataIndicationSize = (int32_t)DataLength;
+                InterlockedAdd64(
+                    &RecvContext->ProcContext->OutstandingPendingBytes,
+                    RecvContext->DataIndicationSize);
 
                 RecvContext->Binding = Binding;
                 RecvContext->ReferenceCount = 0;
