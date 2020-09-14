@@ -62,9 +62,9 @@ $WpaQUICLogProfileXml = `
         <Stack Value="SampledProfile"/>
       </Stacks>
     </SystemProvider>
-    <EventProvider Id="MsQuicEtwPerf" Name="ff15e657-4f26-570e-88ab-0796b258d11c" NonPagedMemory="true" Level="5">
+    <EventProvider Id="MsQuicEtwPerf" Name="ff15e657-4f26-570e-88ab-0796b258d11c" NonPagedMemory="true" Level="4">
       <Keywords>
-        <Keyword Value="0xE0000000"/>
+        <Keyword Value="0xC0000000"/>
       </Keywords>
     </EventProvider>
     <Profile Id="CPU.Light.File" Name="CPU" Description="CPU Stacks" LoggingMode="File" DetailLevel="Light">
@@ -189,7 +189,7 @@ function Wait-ForRemote {
     # Ping sidechannel socket on 9999 to tell the app to die
     $Socket = New-Object System.Net.Sockets.UDPClient
     $Socket.Send(@(1), 1, $RemoteAddress, 9999) | Out-Null
-    Wait-Job -Job $Job -Timeout 120 | Out-Null
+    Wait-Job -Job $Job -Timeout 360 | Out-Null
     Stop-Job -Job $Job | Out-Null
     $RetVal = Receive-Job -Job $Job
     return $RetVal -join "`n"
