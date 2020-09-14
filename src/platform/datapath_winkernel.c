@@ -92,7 +92,7 @@ typedef enum {
 //
 // The maximum allowed pending WSK buffers per proc before copying.
 //
-#define PENDING_BUFFER_LIMIT                256000
+#define PENDING_BUFFER_LIMIT                32000
 
 static_assert(
     sizeof(QUIC_BUFFER) == sizeof(WSABUF),
