@@ -62,6 +62,11 @@ $WpaQUICLogProfileXml = `
         <Stack Value="SampledProfile"/>
       </Stacks>
     </SystemProvider>
+    <EventProvider Id="DroppedPackets" Name="2F07E2EE-15DB-40F1-90EF-9D7BA282188A" NonPagedMemory="true" Level="5">
+        <Keywords>
+        <Keyword Value="0x0000010000000000"/>
+        </Keywords>
+    </EventProvider>
     <EventProvider Id="MsQuicEtwPerf" Name="ff15e657-4f26-570e-88ab-0796b258d11c" NonPagedMemory="true" Level="4">
       <Keywords>
         <Keyword Value="0xC0000000"/>
@@ -75,6 +80,7 @@ $WpaQUICLogProfileXml = `
         <EventCollectorId Value="EC_LowVolume">
           <EventProviders>
             <EventProviderId Value="MsQuicEtwPerf" />
+            <EventProviderId Value="DroppedPackets" />
           </EventProviders>
         </EventCollectorId>
       </Collectors>
